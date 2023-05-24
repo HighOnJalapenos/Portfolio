@@ -1,0 +1,273 @@
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    background-color: #0C0404;
+}
+
+.salute{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.saluteTextContainer{
+    flex: 3;
+    cursor: default;
+}
+
+.saluteImageContainer{
+    flex: 1;
+}
+
+.saluteImage{
+    width: 100%;
+}
+
+.saluteText{
+    color: #676767;
+    font-size: 50vw;
+}
+
+.nameContainer{
+    height: 100vh;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+
+.name{
+    font-size: 12vw;
+    text-align: center;
+    line-height: 100vh;
+    color: #676767;
+    cursor: default;
+}
+
+.titleContainer{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 12vw;
+    color: #676767;
+    line-height: 100vh;
+    cursor: default;
+}
+
+.black{
+    background: #0C0404 url(./assets/Background1.png);
+}
+
+.white{
+    background: #F2F2F2 url(./assets/Background2.png);
+}
+
+.projectSection{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 0px 100px;
+
+}
+
+.projectTitle{
+    font-size: 8vw;
+    color: #676767;
+    /* text-align: justify; */
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.projectImageContainer{
+    flex: 1;
+    text-align: center;
+}
+
+.projectDetail{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.projectName{
+    font-size: 5vw;
+    color: #676767;
+}
+
+.projectDescription{
+    font-size: 20px;
+    color: #676767;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.projectButton{
+    padding: 10px 20px;
+    color: #676767;
+    border: 2px solid #676767;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectButton::after{
+    content: "Go to page";
+    width: 100%;
+    height: 100%;
+    background-color: #676767;
+    color: #0C0404;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.7s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectButton:hover.projectButton::after{
+    transform: translateX(100%);
+}
+
+.githubSection{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.githubTitle{
+    font-size: 100px;
+    color: #676767;
+}
+
+.dates{
+    font-size: 20px;
+    padding: 10px;
+    color: #676767;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.githubchart{
+    width: 820px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.iconContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* #006d32
+#39d353 */
+
+.box{
+    height: 15px;
+    width: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    transition: all 1s;
+}
+
+.active:nth-child(3n+2){
+    background-color: #006d32;
+}
+
+.iconContainer:hover .active:nth-child(2n){
+    background-color: #39d353;
+}
+
+.iconContainer:hover .active:nth-child(2n+1){
+    background-color: #006d32;
+}
+
+.githubsmall{
+    display: none;
+}
+
+@media screen and (max-width:1024px){
+    .name{
+        transform: none !important;
+    }
+
+    .projectSection{
+        padding: 0px 30px;
+    }
+
+    .project{
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .projectImageContainer{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .projectDescription{
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    }
+
+    .project:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .projectImageContainer, .projectDetail{
+        transform: none !important;
+    }
+
+    .githubTitle{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .githubchart{
+        display: none;
+    }
+
+    .githubsmall{
+    display: contents;
+    }
+
+    svg{
+        fill: #F2F2F2;
+    }
+
+    .githubLink{
+        font-size: 5vw;
+        color: #676767;
+        text-align: center;
+    }
+
+    .githubIconContainer{
+        text-decoration: none;
+    }
+}
